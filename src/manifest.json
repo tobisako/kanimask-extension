@@ -1,0 +1,15 @@
+{
+  "name": "KaniMask",
+  "description": "KaniMask",
+  "version": "0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "kani.html",
+    "default_icon": "img/kani_48.png"
+  },
+  "icons": {
+    "16": "img/kani_16.png",
+    "48": "img/kani_48.png",
+    "128": "img/kani_128.png"
+  }
+}
