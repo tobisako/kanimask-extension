@@ -1,15 +1,24 @@
 {
   "name": "KaniMask",
-  "description": "KaniMask",
-  "version": "0.1",
   "manifest_version": 2,
+  "permissions": ["*://*/*/", "webRequest", "tabs"],
+  "background": {
+    "page": "background.html"
+  },
   "browser_action": {
     "default_popup": "kani.html",
-    "default_icon": "img/kani_48.png"
+    "default_icon": "kani_48.png"
   },
   "icons": {
-    "16": "img/kani_16.png",
-    "48": "img/kani_48.png",
-    "128": "img/kani_128.png"
-  }
+    "16": "kani_16.png",
+    "48": "kani_48.png",
+    "128": "kani_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_scripts.bundle.js"]
+    }
+  ],
+  "web_accessible_resources": ["kani3_scripts.bundle.js"]
 }
